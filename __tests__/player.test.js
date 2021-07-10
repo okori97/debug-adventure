@@ -60,3 +60,4 @@ describe('constructor function', () => {
     });
   });
 });
+

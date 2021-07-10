@@ -1,7 +1,8 @@
-function Weapon(config) {
-  const name = name;
-  const damage = damage;
-  const attackType = attackType;
+function Weapon(details) {
+  this.name = details.name;
+  this.damage = details.damage;
+  this.attackType = details.attackType;
+
 }
 
-module.exports = weapon;
+module.exports = Weapon;
