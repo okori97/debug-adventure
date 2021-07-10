@@ -1,5 +1,5 @@
 /* eslint-disable func-names */
-const Character = require('./character');
+const Character = require('../src/character');
 
 function Player(config) {
   Character.call(this, config);
@@ -20,10 +20,11 @@ Player.prototype._describeAttack = function (target) {
 
 Player.prototype.equip = function (weapon) {
   this.equippedWeapon = weapon;
+  this.damage = weapon.damage;
 };
 
 Player.prototype.attack = function (target) {
-  target._takeDamage(this.equippedWeapon.damage);
+  target._takeDamage(this.damage);
   return this._describeAttack(target);
 };
 

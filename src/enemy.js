@@ -1,5 +1,5 @@
 /* eslint-disable func-names */
-const Character = require('./character');
+const Character = require('../src/character');
 
 function Enemy(config) {
   Character.call(this, config);
@@ -17,6 +17,7 @@ Object.defineProperty(Enemy.prototype, 'constructor', {
 Enemy.prototype._describeAttack = function (target) {
   return `${this.name} lets out a ${this.dialogue}, and hits ${target.name} for ${this.damage} damage!`;
 };
+
 
 Enemy.prototype.attack = function (target) {
   target._takeDamage(this.damage);

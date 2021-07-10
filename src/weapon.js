@@ -1,7 +1,8 @@
-function Weapon(config) {
-  this.name = config.name;
-  this.damage = config.damage;
-  this.attackType = config.attackType;
+function Weapon(details) {
+  this.name = details.name;
+  this.damage = details.damage;
+  this.attackType = details.attackType;
+
 }
 
 module.exports = Weapon;
